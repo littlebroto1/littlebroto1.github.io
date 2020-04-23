@@ -16,18 +16,18 @@ var map = function(n, start1, stop1, start2, stop2, withinBounds) {
   }
 };
 
-const PERLIN_YWRAPB = 4;
-const PERLIN_YWRAP = 1 << PERLIN_YWRAPB;
-const PERLIN_ZWRAPB = 8;
-const PERLIN_ZWRAP = 1 << PERLIN_ZWRAPB;
-const PERLIN_SIZE = 4095;
+var PERLIN_YWRAPB = 4;
+var PERLIN_YWRAP = 1 << PERLIN_YWRAPB;
+var PERLIN_ZWRAPB = 8;
+var PERLIN_ZWRAP = 1 << PERLIN_ZWRAPB;
+var PERLIN_SIZE = 4095;
 
-let perlin_octaves = 4; // default to medium smooth
-let perlin_amp_falloff = 0.5; // 50% reduction/octave
+var perlin_octaves = 4; // default to medium smooth
+var perlin_amp_falloff = 0.5; // 50% reduction/octave
 
-const scaled_cosine = i => 0.5 * (1.0 - Math.cos(i * Math.PI));
+var scaled_cosine = i => 0.5 * (1.0 - Math.cos(i * Math.PI));
 
-let perlin; // will be initialized lazily by noise() or noiseSeed()
+var perlin; // will be initialized lazily by noise() or noiseSeed()
 
 /**
  * Returns the Perlin noise value at specified coordinates. Perlin noise is
